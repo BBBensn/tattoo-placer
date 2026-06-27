@@ -15,9 +15,10 @@ Ablageort: `~/Documents/Coding/tattoo-placer/CLAUDE.md`
 
 - **Name:** tattoo-placer
 - **Domain:** tattoo.bensn.me
-- **Version:** v1.0.0
+- **Version:** v1.0.0 ✅
 - **Status:** active
-- **Stack:** Vanilla JS + three.js (CDN, no-build) + IndexedDB · kein Backend
+- **Stack:** Vanilla JS + three.js 0.168.0 (CDN, Importmap, no-build) + IndexedDB · kein Backend
+- **Module:** app.js · scene.js · db.js (+ index.html, style.css)
 
 Web-basierter Tattoo-Placer: generisches 3D-Körpermodell, auf das transparente PNG-Designs als Decals projiziert, transformiert, gespeichert und als Screenshot exportiert werden. Komplett client-side, rein statisch deploybar.
 
@@ -112,7 +113,7 @@ git push origin main
 
 | Version | Feature | Status |
 |---------|---------|--------|
-| v1.0.0 | MVP: Mesh laden · PNG per Drag&Drop + Paste · Decal projizieren · transformieren · IndexedDB save/load · Screenshot- + JSON-Export | aktiv |
+| v1.0.0 | MVP: Mesh laden · PNG per Drag&Drop + Paste · Decal projizieren · transformieren · IndexedDB save/load · Screenshot- + JSON-Export | ✅ done |
 | v1.1.0 | Preset-Library aus eigenen Designs (statt nur Upload) | geplant |
 | v1.2.0 | Armature + Pose-Bends (Knie/Ellbogen) für realistischen Wrap-Test | geplant |
 | v2.0.0 | Optionales Backend (Flask + SQLite) für Cross-Device-Sync | idee |

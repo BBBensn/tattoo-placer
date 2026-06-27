@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tattoo Placer</title>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+
+      <div id="drop-zone" class="drop-zone">
+        Drop PNG here<br>or paste (Ctrl+V)
+      </div>
+
+      <section class="panel">
+        <h3>Images <span class="hint">Right-click to delete</span></h3>
+        <div id="image-grid"></div>
+      </section>
+
+      <section class="panel" id="transform-panel">
+        <h3>Selected Decal</h3>
+        <label>
+          <span>Size <output id="size-val"></output></span>
+          <input type="range" id="size-slider" min="0.03" max="0.5" step="0.005" value="0.15">
+        </label>
+        <label>
+          <span>Rotation <output id="rot-val"></output></span>
+          <input type="range" id="rot-slider" min="-3.14159" max="3.14159" step="0.01" value="0">
+        </label>
+        <div class="btn-row">
+          <button id="reposition-btn">Reposition</button>
+          <button id="delete-decal-btn" class="danger">Delete</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Decals</h3>
+        <div id="decal-list"></div>
+      </section>
+
+      <section class="panel">
+        <h3>Compositions</h3>
+        <div class="comp-row">
+          <input id="comp-name" type="text" placeholder="Name">
+          <button id="save-comp-btn">Save</button>
+        </div>
+        <div id="comp-list"></div>
+      </section>
+
+      <section class="panel">
+        <h3>Export</h3>
+        <div class="export-btns">
+          <button id="screenshot-btn">Screenshot PNG</button>
+          <button id="export-json-btn">Export JSON</button>
+          <button id="import-json-btn">Import JSON</button>
+          <input id="import-file" type="file" accept=".json" style="display:none">
+        </div>
+      </section>
+
+      <div id="status-bar" class="status-bar">Loading…</div>
+
+    </aside>
+    <canvas id="canvas"></canvas>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
